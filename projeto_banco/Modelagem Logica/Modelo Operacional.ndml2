@@ -19,13 +19,13 @@
         "tables": [
           {
             "objectType": "Table_LOGICAL",
-            "name": "SABOR",
+            "name": "TB_ITEMADICIONAIS",
             "comment": "",
             "oldName": "",
             "fields": [
               {
                 "objectType": "TableField_LOGICAL",
-                "name": "ID",
+                "name": "ID_ADICIONAIS",
                 "type": "INTEGER",
                 "length": 0,
                 "decimals": 0,
@@ -33,59 +33,11 @@
                 "defaultType": "None",
                 "defaultValue": "",
                 "comment": "",
-                "oldName": "ID"
+                "oldName": "ID_ADICIONAIS"
               },
               {
                 "objectType": "TableField_LOGICAL",
-                "name": "SABOR",
-                "type": "CHAR VARYING",
-                "length": 255,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "SABOR"
-              }
-            ],
-            "foreignKeys": [
-              {
-                "objectType": "ForeignKey_LOGICAL",
-                "name": "fk_SABOR_ITEM_1",
-                "fields": [
-                  "ID"
-                ],
-                "referencedSchema": "default",
-                "referencedTable": "ITEM",
-                "referencedFields": [
-                  "ID"
-                ],
-                "sourceCardinality": "NoneRelationship",
-                "targetCardinality": "ManyRelationship",
-                "comment": "",
-                "oldName": ""
-              }
-            ],
-            "indexes": [],
-            "uniques": [],
-            "primaryKey": {
-              "objectType": "PrimaryKey_LOGICAL",
-              "name": "",
-              "fields": [
-                "ID"
-              ],
-              "oldName": ""
-            }
-          },
-          {
-            "objectType": "Table_LOGICAL",
-            "name": "PRODUTO",
-            "comment": "",
-            "oldName": "",
-            "fields": [
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID",
+                "name": "ID_ITEM",
                 "type": "INTEGER",
                 "length": 0,
                 "decimals": 0,
@@ -93,65 +45,25 @@
                 "defaultType": "None",
                 "defaultValue": "",
                 "comment": "",
-                "oldName": "ID"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "PRODUTO",
-                "type": "CHAR VARYING",
-                "length": 255,
-                "decimals": 0,
-                "isNullable": false,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "PRODUTO"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "VALOR",
-                "type": "DECIMAL",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "VALOR"
+                "oldName": "ID_ITEM"
               }
             ],
-            "foreignKeys": [
-              {
-                "objectType": "ForeignKey_LOGICAL",
-                "name": "fk_PRODUTO_ITEM_1",
-                "fields": [
-                  "ID"
-                ],
-                "referencedSchema": "default",
-                "referencedTable": "ITEM",
-                "referencedFields": [
-                  "ID"
-                ],
-                "sourceCardinality": "NoneRelationship",
-                "targetCardinality": "ManyRelationship",
-                "comment": "",
-                "oldName": ""
-              }
-            ],
+            "foreignKeys": [],
             "indexes": [],
             "uniques": [],
             "primaryKey": {
               "objectType": "PrimaryKey_LOGICAL",
               "name": "",
               "fields": [
-                "ID"
+                "ID_ADICIONAIS",
+                "ID_ITEM"
               ],
               "oldName": ""
             }
           },
           {
             "objectType": "Table_LOGICAL",
-            "name": "ADICIONAIS",
+            "name": "TB_ADICIONAIS",
             "comment": "",
             "oldName": "",
             "fields": [
@@ -200,7 +112,7 @@
                   "ID"
                 ],
                 "referencedSchema": "default",
-                "referencedTable": "ITEMADICIONAIS",
+                "referencedTable": "TB_ITEMADICIONAIS",
                 "referencedFields": [
                   "ID_ADICIONAIS"
                 ],
@@ -223,51 +135,7 @@
           },
           {
             "objectType": "Table_LOGICAL",
-            "name": "ITEMADICIONAIS",
-            "comment": "",
-            "oldName": "",
-            "fields": [
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID_ADICIONAIS",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": false,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID_ADICIONAIS"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID_ITEM",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": false,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID_ITEM"
-              }
-            ],
-            "foreignKeys": [],
-            "indexes": [],
-            "uniques": [],
-            "primaryKey": {
-              "objectType": "PrimaryKey_LOGICAL",
-              "name": "",
-              "fields": [
-                "ID_ADICIONAIS",
-                "ID_ITEM"
-              ],
-              "oldName": ""
-            }
-          },
-          {
-            "objectType": "Table_LOGICAL",
-            "name": "LOJA",
+            "name": "TB_SABOR",
             "comment": "",
             "oldName": "",
             "fields": [
@@ -285,7 +153,7 @@
               },
               {
                 "objectType": "TableField_LOGICAL",
-                "name": "NOME",
+                "name": "SABOR",
                 "type": "CHAR VARYING",
                 "length": 255,
                 "decimals": 0,
@@ -293,79 +161,67 @@
                 "defaultType": "None",
                 "defaultValue": "",
                 "comment": "",
-                "oldName": "NOME"
+                "oldName": "SABOR"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_SABOR_ITEM_1",
+                "fields": [
+                  "ID"
+                ],
+                "referencedSchema": "default",
+                "referencedTable": "TB_ITEM",
+                "referencedFields": [
+                  "ID"
+                ],
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "ManyRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "ID"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_PRODUTO",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID"
               },
               {
                 "objectType": "TableField_LOGICAL",
-                "name": "CNPJ",
+                "name": "PRODUTO",
                 "type": "CHAR VARYING",
-                "length": 14,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "CNPJ"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID_LOCAL",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID_LOCAL"
-              }
-            ],
-            "foreignKeys": [
-              {
-                "objectType": "ForeignKey_LOGICAL",
-                "name": "fk_LOJA_VENDA_1",
-                "fields": [
-                  "ID"
-                ],
-                "referencedSchema": "default",
-                "referencedTable": "VENDA",
-                "referencedFields": [
-                  "ID"
-                ],
-                "sourceCardinality": "NoneRelationship",
-                "targetCardinality": "ManyRelationship",
-                "comment": "",
-                "oldName": ""
-              }
-            ],
-            "indexes": [],
-            "uniques": [],
-            "primaryKey": {
-              "objectType": "PrimaryKey_LOGICAL",
-              "name": "",
-              "fields": [
-                "ID"
-              ],
-              "oldName": ""
-            }
-          },
-          {
-            "objectType": "Table_LOGICAL",
-            "name": "ITEM",
-            "comment": "",
-            "oldName": "",
-            "fields": [
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID",
-                "type": "INTEGER",
-                "length": 0,
+                "length": 255,
                 "decimals": 0,
                 "isNullable": false,
                 "defaultType": "None",
                 "defaultValue": "",
                 "comment": "",
-                "oldName": "ID"
+                "oldName": "PRODUTO"
               },
               {
                 "objectType": "TableField_LOGICAL",
@@ -378,137 +234,17 @@
                 "defaultValue": "",
                 "comment": "",
                 "oldName": "VALOR"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID_SABOR",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID_SABOR"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID_PRODUTO",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID_PRODUTO"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID_VENDA",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID_VENDA"
               }
             ],
             "foreignKeys": [
               {
                 "objectType": "ForeignKey_LOGICAL",
-                "name": "fk_ITEM_ITEMADICIONAIS_1",
+                "name": "fk_PRODUTO_ITEM_1",
                 "fields": [
                   "ID"
                 ],
                 "referencedSchema": "default",
-                "referencedTable": "ITEMADICIONAIS",
-                "referencedFields": [
-                  "ID_ADICIONAIS"
-                ],
-                "sourceCardinality": "NoneRelationship",
-                "targetCardinality": "ManyRelationship",
-                "comment": "",
-                "oldName": ""
-              }
-            ],
-            "indexes": [],
-            "uniques": [],
-            "primaryKey": {
-              "objectType": "PrimaryKey_LOGICAL",
-              "name": "",
-              "fields": [
-                "ID"
-              ],
-              "oldName": ""
-            }
-          },
-          {
-            "objectType": "Table_LOGICAL",
-            "name": "VENDA",
-            "comment": "",
-            "oldName": "",
-            "fields": [
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": false,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "ID_LOJA",
-                "type": "INTEGER",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "ID_LOJA"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "VALOR",
-                "type": "DECIMAL",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "VALOR"
-              },
-              {
-                "objectType": "TableField_LOGICAL",
-                "name": "DATA",
-                "type": "DATE",
-                "length": 0,
-                "decimals": 0,
-                "isNullable": true,
-                "defaultType": "None",
-                "defaultValue": "",
-                "comment": "",
-                "oldName": "DATA"
-              }
-            ],
-            "foreignKeys": [
-              {
-                "objectType": "ForeignKey_LOGICAL",
-                "name": "fk_VENDA_ITEM_1",
-                "fields": [
-                  "ID"
-                ],
-                "referencedSchema": "default",
-                "referencedTable": "ITEM",
+                "referencedTable": "TB_ITEM",
                 "referencedFields": [
                   "ID"
                 ],
@@ -531,7 +267,7 @@
           },
           {
             "objectType": "Table_LOGICAL",
-            "name": "LOCAL",
+            "name": "TB_LOCAL",
             "comment": "",
             "oldName": "",
             "fields": [
@@ -616,9 +352,273 @@
                   "ID"
                 ],
                 "referencedSchema": "default",
-                "referencedTable": "LOJA",
+                "referencedTable": "TB_LOJA",
                 "referencedFields": [
                   "ID"
+                ],
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "ManyRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "ID"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_LOJA",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "NOME",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "NOME"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "CNPJ",
+                "type": "CHAR VARYING",
+                "length": 14,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "CNPJ"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID_LOCAL",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID_LOCAL"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_LOJA_VENDA_1",
+                "fields": [
+                  "ID"
+                ],
+                "referencedSchema": "default",
+                "referencedTable": "TB_VENDA",
+                "referencedFields": [
+                  "ID"
+                ],
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "ManyRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "ID"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_VENDA",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID_LOJA",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID_LOJA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "VALOR",
+                "type": "DECIMAL",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "VALOR"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_VENDA_ITEM_1",
+                "fields": [
+                  "ID"
+                ],
+                "referencedSchema": "default",
+                "referencedTable": "TB_ITEM",
+                "referencedFields": [
+                  "ID"
+                ],
+                "sourceCardinality": "NoneRelationship",
+                "targetCardinality": "ManyRelationship",
+                "comment": "",
+                "oldName": ""
+              }
+            ],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "ID"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_ITEM",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "VALOR",
+                "type": "DECIMAL",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "VALOR"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID_SABOR",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID_SABOR"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID_PRODUTO",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID_PRODUTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID_VENDA",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID_VENDA"
+              }
+            ],
+            "foreignKeys": [
+              {
+                "objectType": "ForeignKey_LOGICAL",
+                "name": "fk_ITEM_ITEMADICIONAIS_1",
+                "fields": [
+                  "ID"
+                ],
+                "referencedSchema": "default",
+                "referencedTable": "TB_ITEMADICIONAIS",
+                "referencedFields": [
+                  "ID_ADICIONAIS"
                 ],
                 "sourceCardinality": "NoneRelationship",
                 "targetCardinality": "ManyRelationship",
@@ -658,7 +658,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "ITEM",
+          "tableName": "TB_ITEM",
           "x": 490,
           "y": 230,
           "width": 200,
@@ -674,7 +674,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "VENDA",
+          "tableName": "TB_VENDA",
           "x": 800,
           "y": 220,
           "width": 200,
@@ -690,7 +690,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "LOJA",
+          "tableName": "TB_LOJA",
           "x": 800,
           "y": 460,
           "width": 200,
@@ -706,7 +706,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "LOCAL",
+          "tableName": "TB_LOCAL",
           "x": 490,
           "y": 480,
           "width": 200,
@@ -722,7 +722,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "SABOR",
+          "tableName": "TB_SABOR",
           "x": 130,
           "y": 270,
           "width": 200,
@@ -738,7 +738,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "PRODUTO",
+          "tableName": "TB_PRODUTO",
           "x": 130,
           "y": 430,
           "width": 200,
@@ -754,7 +754,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "ITEMADICIONAIS",
+          "tableName": "TB_ITEMADICIONAIS",
           "x": 490,
           "y": 90,
           "width": 200,
@@ -770,7 +770,7 @@
         {
           "type": "table",
           "schemaName": "default",
-          "tableName": "ADICIONAIS",
+          "tableName": "TB_ADICIONAIS",
           "x": 140,
           "y": 70,
           "width": 200,
@@ -788,7 +788,7 @@
       "relations": [
         {
           "name": "fk_VENDA_ITEM_1",
-          "sourceTableName": "VENDA",
+          "sourceTableName": "TB_VENDA",
           "sourceSchemaName": "default",
           "lineWidth": 1,
           "visible": true,
@@ -830,7 +830,7 @@
         },
         {
           "name": "fk_LOJA_VENDA_1",
-          "sourceTableName": "LOJA",
+          "sourceTableName": "TB_LOJA",
           "sourceSchemaName": "default",
           "lineWidth": 1,
           "visible": true,
@@ -872,7 +872,7 @@
         },
         {
           "name": "fk_LOCAL_LOJA_1",
-          "sourceTableName": "LOCAL",
+          "sourceTableName": "TB_LOCAL",
           "sourceSchemaName": "default",
           "lineWidth": 1,
           "visible": true,
@@ -914,7 +914,7 @@
         },
         {
           "name": "fk_SABOR_ITEM_1",
-          "sourceTableName": "SABOR",
+          "sourceTableName": "TB_SABOR",
           "sourceSchemaName": "default",
           "lineWidth": 1,
           "visible": true,
@@ -956,7 +956,7 @@
         },
         {
           "name": "fk_PRODUTO_ITEM_1",
-          "sourceTableName": "PRODUTO",
+          "sourceTableName": "TB_PRODUTO",
           "sourceSchemaName": "default",
           "lineWidth": 1,
           "visible": true,
@@ -994,7 +994,7 @@
         },
         {
           "name": "fk_ITEM_ITEMADICIONAIS_1",
-          "sourceTableName": "ITEM",
+          "sourceTableName": "TB_ITEM",
           "sourceSchemaName": "default",
           "lineWidth": 1,
           "visible": true,
@@ -1036,7 +1036,7 @@
         },
         {
           "name": "fk_ADICIONAIS_ITEMADICIONAIS_1",
-          "sourceTableName": "ADICIONAIS",
+          "sourceTableName": "TB_ADICIONAIS",
           "sourceSchemaName": "default",
           "lineWidth": 1,
           "visible": true,

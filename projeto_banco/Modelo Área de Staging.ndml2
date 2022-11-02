@@ -1,0 +1,831 @@
+{
+  "paper": {
+    "name": "A4",
+    "leftMargin": 0.5,
+    "rightMargin": 0.5,
+    "topMargin": 0.5,
+    "bottomMargin": 0.5,
+    "isPortriat": true
+  },
+  "modelVersion": 2.01,
+  "defaultSchema": "default",
+  "server": {
+    "objectType": "Server_LOGICAL",
+    "name": "Default",
+    "schemas": [
+      {
+        "objectType": "Schema_LOGICAL",
+        "name": "default",
+        "tables": [
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_BRIDGE_ADICIONAL",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_GRUPO",
+                "type": "INT",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_GRUPO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_ADICIONAL",
+                "type": "INT",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_ADICIONAL"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": []
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_GRUPO_ADICIONAL",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_GRUPO_ADICIONAL",
+                "type": "INT",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_GRUPO_ADICIONAL"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_PRODUTO",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_PRODUTO",
+                "type": "INT",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_PRODUTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "PRODUTO",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "PRODUTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "VALOR",
+                "type": "DECIMAL",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "VALOR"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": []
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_LOCAL",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_LOCAL",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_LOCAL"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ESTADO",
+                "type": "CHAR",
+                "length": 2,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ESTADO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "CIDADE",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "CIDADE"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "BAIRRO",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "BAIRRO"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": []
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_VIO_VENDA",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ID_VIOLACAO",
+                "type": "INT",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ID_VIOLACAO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_VENDA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_VENDA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_SABOR",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_SABOR"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_ESTABELECIMENTO",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_ESTABELECIMENTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_LOCAL",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_LOCAL"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_PRODUTO",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_PRODUTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "QUANTIDADE",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "QUANTIDADE"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "VALOR",
+                "type": "DECIMAL",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "VALOR"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DT_ERRO",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DT_ERRO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "VIOLACAO",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "VIOLACAO"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [
+                "ID_VIOLACAO"
+              ],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_FATO_VENDA",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_VENDA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_VENDA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_VENDA",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_VENDA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_SABOR",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_SABOR"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_ESTABELECIMENTO",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_ESTABELECIMENTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_LOCAL",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_LOCAL"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_PRODUTO",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_PRODUTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "QUANTIDADE",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "QUANTIDADE"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "VALOR",
+                "type": "DECIMAL",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": true,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "VALOR"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": []
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_SABOR",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_SABOR",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_SABOR"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "SABOR",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "SABOR"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_ESTABELECIMENTO",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_ESTABELECIMENTO",
+                "type": "INT",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_ESTABELECIMENTO"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "NOME",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "NOME"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "CNPJ",
+                "type": "CHAR VARYING",
+                "length": 14,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "CNPJ"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [],
+              "oldName": ""
+            }
+          },
+          {
+            "objectType": "Table_LOGICAL",
+            "name": "TB_AUX_ADICIONAL",
+            "comment": "",
+            "oldName": "",
+            "fields": [
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "DATA_CARGA",
+                "type": "DATE",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "DATA_CARGA"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "COD_ADICIONAL",
+                "type": "INTEGER",
+                "length": 0,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "COD_ADICIONAL"
+              },
+              {
+                "objectType": "TableField_LOGICAL",
+                "name": "ADICIONAL",
+                "type": "CHAR VARYING",
+                "length": 255,
+                "decimals": 0,
+                "isNullable": false,
+                "defaultType": "None",
+                "defaultValue": "",
+                "comment": "",
+                "oldName": "ADICIONAL"
+              }
+            ],
+            "foreignKeys": [],
+            "indexes": [],
+            "uniques": [],
+            "primaryKey": {
+              "objectType": "PrimaryKey_LOGICAL",
+              "name": "",
+              "fields": [],
+              "oldName": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "diagrams": [
+    {
+      "name": "Diagram 1",
+      "paperWidth": 1,
+      "paperHeight": 1,
+      "tableFont": "Arial Unicode MS",
+      "tableFontSize": 14,
+      "isBalckWhite": false,
+      "showDBSchemaName": false,
+      "showViewRelations": true,
+      "notation": "default",
+      "showFieldComment": false,
+      "showTableComment": false,
+      "shapes": [
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_AUX_ADICIONAL",
+          "x": 20,
+          "y": 20,
+          "width": 200,
+          "height": 120,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_AUX_BRIDGE_ADICIONAL",
+          "x": 300,
+          "y": 10,
+          "width": 230,
+          "height": 120,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_AUX_ESTABELECIMENTO",
+          "x": 10,
+          "y": 200,
+          "width": 240,
+          "height": 140,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_AUX_PRODUTO",
+          "x": 320,
+          "y": 190,
+          "width": 200,
+          "height": 130,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_AUX_SABOR",
+          "x": 650,
+          "y": 160,
+          "width": 200,
+          "height": 120,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_AUX_LOCAL",
+          "x": 30,
+          "y": 470,
+          "width": 200,
+          "height": 150,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_AUX_FATO_VENDA",
+          "x": 320,
+          "y": 390,
+          "width": 200,
+          "height": 230,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        },
+        {
+          "type": "table",
+          "schemaName": "default",
+          "tableName": "TB_VIO_VENDA",
+          "x": 640,
+          "y": 350,
+          "width": 200,
+          "height": 270,
+          "isBold": false,
+          "titleColor": {
+            "r": 55,
+            "g": 131,
+            "b": 192,
+            "a": 1
+          }
+        }
+      ],
+      "layers": [],
+      "relations": [],
+      "viewRelations": []
+    }
+  ]
+}
